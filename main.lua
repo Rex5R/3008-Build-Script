@@ -63,7 +63,7 @@ wait(2)
 
 while wait() do
 	print(mouse.Target)
-	if mouse.Target ~= nil and mouse.Target ~= model:GetChildren() then
+	if mouse.Target ~= nil or mouse.Target ~= model:GetChildren() then
 		model:MoveTo(mouse.Target.Position)
 		mouse.Button1Down:Connect(function()
 			local get = model:GetChildren()
